@@ -1,0 +1,43 @@
+body {
+    font-family: josefin sans, Verdana;
+    text-align: center;
+    color:#565551;
+    width: 100%
+  }
+  
+  .rockpic, .paperpic, .scispic {
+    width: 2.5em;
+    opacity: 0.5;
+  }
+  
+  .playerdiv .rockpic:hover, .playerdiv .paperpic:hover, .playerdiv .scispic:hover {
+    opacity: 1;
+  }
+  
+  .chosen {
+    opacity: 1;
+  }
+  
+  .compdiv {
+    width:42%;
+    height:150px;
+    float:left;
+  }
+  
+  .playerdiv {
+    width:42%;
+    height:150px;
+    float:left;
+  }
+  
+  .centermsg {
+    padding-top: 45px;
+    width:10%;
+    height:150px;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  
+  
