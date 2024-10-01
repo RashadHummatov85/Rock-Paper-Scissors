@@ -1,43 +1,102 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: josefin sans, Verdana;
-    text-align: center;
-    color:#565551;
-    width: 100%
-  }
-  
-  .rockpic, .paperpic, .scispic {
-    width: 2.5em;
-    opacity: 0.5;
-  }
-  
-  .playerdiv .rockpic:hover, .playerdiv .paperpic:hover, .playerdiv .scispic:hover {
-    opacity: 1;
-  }
-  
-  .chosen {
-    opacity: 1;
-  }
-  
-  .compdiv {
-    width:42%;
-    height:150px;
-    float:left;
-  }
-  
-  .playerdiv {
-    width:42%;
-    height:150px;
-    float:left;
-  }
-  
-  .centermsg {
-    padding-top: 45px;
-    width:10%;
-    height:150px;
-    float: left;
-    font-size: 1em;
-    font-weight: bold;
-  }
-  
-  
-  
+  font-family: 'Josefin Sans', Verdana, sans-serif;
+  text-align: center;
+  color: #565551;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.playerdiv, .compdiv {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+
+.playerdiv h2, .compdiv h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.rockpic, .paperpic, .scispic {
+  width: 100px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  margin: 0 10px;
+}
+
+.rockpic:hover, .paperpic:hover, .scispic:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.chosen {
+  opacity: 1;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+}
+
+.centermsg {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.centermsg p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+#round-number, #scores {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.usermsg-player, .usermsg-comp, .usermsg-result {
+  font-size: 1em;
+  color: #555;
+}
+
+#reset-button {
+  display: none; /* Hidden initially */
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+  background-color: #45a049;
+}
+
+/* Clear floats if any */
+body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
