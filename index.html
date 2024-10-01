@@ -1,79 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <title>Rock Paper Scissors</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Link to your custom JavaScript file -->
+    <!-- Link to JavaScript -->
     <script src="script.js" defer></script>
-    <style>
-      /* Your existing CSS */
-      body {
-          font-family: 'Josefin Sans', Verdana, sans-serif;
-          text-align: center;
-          color: #565551;
-          width: 100%;
-      }
-      
-      .rockpic, .paperpic, .scispic {
-          width: 2.5em;
-          opacity: 0.5;
-          cursor: pointer; /* Add pointer cursor for better UX */
-      }
-      
-      .playerdiv .rockpic:hover, .playerdiv .paperpic:hover, .playerdiv .scispic:hover {
-          opacity: 1;
-      }
-      
-      .chosen {
-          opacity: 1;
-      }
-      
-      .compdiv, .playerdiv {
-          width: 42%;
-          height: 150px;
-          float: left;
-      }
-      
-      .centermsg {
-          padding-top: 45px;
-          width: 10%;
-          height: 150px;
-          float: left;
-          font-size: 1em;
-          font-weight: bold;
-      }
-      
-      /* Clear floats */
-      body::after {
-          content: "";
-          display: table;
-          clear: both;
-      }
-    </style>
-  </head>
-  <body>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+
     <div class="playerdiv">
-      <h1>Player Choice</h1>
-      <img class="rockpic" src="https://www.dropbox.com/s/uwf43u6m2ok87kr/rockuse.png?raw=1" alt="Rock">
-      <img class="paperpic" src="https://www.dropbox.com/s/x94uwa8836i0loc/papruse.png?raw=1" alt="Paper">
-      <img class="scispic" src="https://www.dropbox.com/s/dg59e26xkfp5gjg/scisuse.png?raw=1" alt="Scissors">
+        <h2>Player Choice</h2>
+        <img class="rockpic" src="https://www.dropbox.com/s/uwf43u6m2ok87kr/rockuse.png?raw=1" alt="Rock">
+        <img class="paperpic" src="https://www.dropbox.com/s/x94uwa8836i0loc/papruse.png?raw=1" alt="Paper">
+        <img class="scispic" src="https://www.dropbox.com/s/dg59e26xkfp5gjg/scisuse.png?raw=1" alt="Scissors">
     </div>
 
     <div class="centermsg">
-      <p>Make your selection</p>
-      <p class="usermsg-player"></p>
-      <p class="usermsg-comp"></p>
-      <p class="usermsg-result"></p>
+        <p>Make your selection</p>
+        <p id="round-number">Round: 0 / 5</p>
+        <p id="scores">Player: 0 | Computer: 0</p>
+        <p class="usermsg-player"></p>
+        <p class="usermsg-comp"></p>
+        <p class="usermsg-result"></p>
     </div>
 
     <div class="compdiv">
-      <h1>Computer Choice</h1>
-      <img class="rockpic" src="https://www.dropbox.com/s/uwf43u6m2ok87kr/rockuse.png?raw=1" alt="Rock">
-      <img class="paperpic" src="https://www.dropbox.com/s/x94uwa8836i0loc/papruse.png?raw=1" alt="Paper">
-      <img class="scispic" src="https://www.dropbox.com/s/dg59e26xkfp5gjg/scisuse.png?raw=1" alt="Scissors">
-    </div> 
-  </body>
+        <h2>Computer Choice</h2>
+        <img class="rockpic" src="https://www.dropbox.com/s/uwf43u6m2ok87kr/rockuse.png?raw=1" alt="Rock">
+        <img class="paperpic" src="https://www.dropbox.com/s/x94uwa8836i0loc/papruse.png?raw=1" alt="Paper">
+        <img class="scispic" src="https://www.dropbox.com/s/dg59e26xkfp5gjg/scisuse.png?raw=1" alt="Scissors">
+    </div>
+
+    <button id="reset-button">Reset Game</button>
+</body>
 </html>
+
